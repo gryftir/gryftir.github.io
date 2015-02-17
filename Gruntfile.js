@@ -24,6 +24,14 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
+    'gh-pages': {
+      options: {
+        base:'dist',
+        branch: 'master',
+      },
+        src: ['**']
+    },
+
     // Project settings
     yeoman: appConfig,
 
@@ -398,6 +406,24 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+
+  grunt.registerTask('git', [
+    'clean:dist',
+    'wiredep',
+    'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'ngAnnotate',
+    'copy:dist',
+    'cdnify',
+    'cssmin',
+    'uglify',
+    //'filerev',
+    'usemin',
+    'htmlmin',
+    'gh-pages',
   ]);
 
   grunt.registerTask('default', [
