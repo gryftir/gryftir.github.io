@@ -75,7 +75,7 @@ html, body {
 }
 
 .github:before: {
-  content=" ";
+  content:" ";
   left: 0;
   background-image: url('../images/GitHub-Mark-32px.png');
 }
