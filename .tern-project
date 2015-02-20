@@ -1,0 +1,22 @@
+{
+  "libs": [
+    "browser",
+    "jquery"
+  ],
+  "loadEagerly": [
+    "./app/scripts/app.js",
+  "./app/scripts/controllers/*.js",
+  "./app/scripts/services/*.js",
+  "./app/scripts/directives/*.js",
+  "./test/spec/**/*.js",
+  "./app/scripts/**/*.js",
+  ],
+  "plugins": {
+    "angular":{
+      "baseURL": "./",
+      "paths": {}
+    }
+  }
+}
+
+
